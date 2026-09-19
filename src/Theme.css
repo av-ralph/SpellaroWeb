@@ -53,7 +53,7 @@ body { background: var(--cream); color: var(--ink); }
 .phone { background: #173746; }
 .mini-word span { background: #d8edf8; color: #187eb2; }
 .score-ring { border-color: #ff8c00; }
-.store-buttons a.recommended::after { background: #ffd54f; }
+.store-buttons .store-btn.recommended::after { background: #ffd54f; }
 
 @media (max-width: 900px) {
   .hero-shell { background-image: linear-gradient(rgba(255,251,239,.94), rgba(255,251,239,.58)), var(--adventure-bg); background-position: 60% center; }
