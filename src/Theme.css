@@ -1,0 +1,65 @@
+:root {
+  --ink: #203f51;
+  --purple: #109e69;
+  --lilac: #d5f1e6;
+  --cream: #fffbef;
+  --coral: #ff6f61;
+  --yellow: #ffd54f;
+  --sky: #238bca;
+  --orange: #ff8c00;
+}
+
+body { background: var(--cream); color: var(--ink); }
+.brand-mark { background: var(--orange); }
+.hero-shell {
+  position: relative;
+  isolation: isolate;
+  background-image: linear-gradient(90deg, rgba(255,251,239,.98) 0%, rgba(255,251,239,.92) 34%, rgba(255,251,239,.28) 64%, rgba(255,251,239,.08) 100%), var(--adventure-bg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-block: 1px solid rgba(32,63,81,.1);
+}
+.hero-shell::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 130px;
+  background: linear-gradient(transparent, rgba(255,251,239,.9));
+  z-index: -1;
+}
+.hero { min-height: 720px; }
+.hero-visual::before { background: rgba(255,213,79,.74); }
+.hero-visual img { width: min(100%, 570px); filter: drop-shadow(0 28px 28px rgba(32,63,81,.28)); }
+.orbit { display: none; }
+.eyebrow, .kicker, h1 em { color: #087b52; }
+.primary, .play-icon, .clue>span, .game-actions .next { background: #109e69; }
+.primary { border: 2px solid #00825a; box-shadow: 0 5px 0 #00825a; }
+.nav-cta, .marquee { background: #203f51; }
+.marquee span { color: #ffd54f; }
+.feature-card.purple { background: #d5f1e6; }
+.feature-card.coral { background: #ffe0aa; }
+.feature-card.yellow { background: #d8edf8; }
+.tile-stack i { color: #238bca; box-shadow: 0 12px 0 #9ed6ef; }
+.tile-stack i:nth-child(2) { color: #ff8c00; }
+.sound-art span { background: #ff8c00; }
+.sound-art i { background: #d46e00; }
+.progress-art>span, .phone-logo span, .phone-screen button { background: #109e69; }
+.play-section { background: #e8f6ee; }
+.learning-points .icon, .answer-row span { color: #109e69; }
+.clue { background: #fff7d9; }
+.download-card { background: #187eb2; }
+.download-card::after { border-color: rgba(255,255,255,.35); }
+.phone { background: #173746; }
+.mini-word span { background: #d8edf8; color: #187eb2; }
+.score-ring { border-color: #ff8c00; }
+.store-buttons a.recommended::after { background: #ffd54f; }
+
+@media (max-width: 900px) {
+  .hero-shell { background-image: linear-gradient(rgba(255,251,239,.94), rgba(255,251,239,.58)), var(--adventure-bg); background-position: 60% center; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 780px; }
+  .hero-shell { background-position: 62% center; }
+}
